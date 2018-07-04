@@ -11,5 +11,10 @@ describe "user sees all articles" do
       expect(page).to have_link(article_1.title)
       expect(page).to have_link(article_2.title)
     end
+    it 'displays a create a new article link' do
+      visit '/articles'
+
+      expect(page).to have_link('Create a New Article')
+    end
   end
 end
